@@ -1,0 +1,52 @@
+//
+// Copyright (C) 2014 The Android Open Source Project
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+
+cc_library_shared {
+    name: "libmtkfmjni",
+
+    cflags: select(soong_config_variable("libfmjni", "no_fm_firmware"), {
+        true: ["-DQCOM_NO_FM_FIRMWARE"],
+        default: [],
+    }),
+
+    srcs: select(soong_config_variable("libfmjni", "vendor"), {
+        "qcom": [":libfmjni-qcom-srcs"],
+        "slsi": [":libfmjni-slsi-srcs"],
+        default: [
+            "fmr_core.cpp",
+            "fmr_err.cpp",
+            "libfm_jni.cpp",
+            "common.cpp",
+            "custom.cpp",
+        ],
+    }),
+
+    header_libs: [
+        "jni_headers",
+    ] + select(soong_config_variable("libfmjni", "vendor"), {
+        "qcom": ["libfmjni-qcom-headers"],
+        "slsi": ["libfmjni-slsi-headers"],
+        default: [],
+    }),
+
+    shared_libs: [
+        "libcutils",
+        "libdl",
+        "liblog",
+        "libmedia",
+        "libnativehelper",
+    ],
+}
