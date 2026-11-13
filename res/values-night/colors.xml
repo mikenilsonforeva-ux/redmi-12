@@ -91,4 +91,13 @@
     <color name="recording_line_bg_color">@android:color/system_neutral2_300</color>
     <color name="recording_dot_tint">#e60909</color>
     <color name="recording_stop_btn_color">@android:color/system_accent2_200</color>
+
+    <!-- Signal diagnostics -->
+    <color name="signal_card_bg_color">@android:color/system_accent2_700</color>
+    <color name="signal_text_primary_color">@android:color/system_neutral2_100</color>
+    <color name="signal_text_secondary_color">@android:color/system_neutral2_200</color>
+    <color name="signal_value_color">@android:color/system_accent1_100</color>
+    <color name="signal_graph_line">@android:color/system_accent1_200</color>
+    <color name="signal_graph_grid">@android:color/system_neutral2_500</color>
+    <color name="signal_graph_text">@android:color/system_neutral2_200</color>
 </resources>

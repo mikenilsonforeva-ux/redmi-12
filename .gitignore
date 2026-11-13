@@ -1,0 +1,18 @@
+# Build outputs
+*.apk
+*.aab
+*.zip
+*.class
+build/
+out/
+
+# Signing material must never be committed
+*.keystore
+*.jks
+*.p12
+*.pem
+
+# Editor / OS noise
+.idea/
+*.iml
+.DS_Store

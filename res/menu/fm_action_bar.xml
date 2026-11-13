@@ -44,4 +44,8 @@
         android:id="@+id/fm_record_list"
         android:showAsAction ="never"
         android:title="@string/fm_over_record_list" />
+    <item
+        android:id="@+id/fm_signal"
+        android:showAsAction ="never"
+        android:title="@string/signal_title" />
 </menu>

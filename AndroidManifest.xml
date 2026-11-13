@@ -90,6 +90,12 @@
             android:theme="@style/AppThemeMain.WithTitle"
             android:launchMode="singleTask" >
         </activity>
+        <activity
+            android:name=".FmSignalActivity"
+            android:exported="false"
+            android:label="@string/signal_title"
+            android:theme="@style/AppThemeMain.WithTitle" >
+        </activity>
     </application>
 
 </manifest>

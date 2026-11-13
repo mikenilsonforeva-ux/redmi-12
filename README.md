@@ -104,5 +104,12 @@ PRODUCT_PACKAGES += \
 ## Contributing
 Contributions are welcome! Fixes and improvements for different SoCs are highly appreciated. Share your changes via PR!
 
+## Xiaomi Redmi 12 4G (MT6631) notes
+This copy is adapted for one device: Redmi 12 4G (`23053RN02Y`, crDroid, Android 16) with the MediaTek MT6631 FM chip, installed as a privileged app through a Magisk systemless module.
+
+- **Signal diagnostics screen** (menu "⋮" → "Signal diagnostics"): read-only raw values from the FM driver (RSSI, stereo/mono flag, RDS BLER, antenna capacitor array), an RSSI graph, and honest "not available" states. See [docs/AUDIT.md](docs/AUDIT.md) for what is and is not confirmed.
+- Build, Magisk update and rollback: [docs/INSTALL.md](docs/INSTALL.md).
+- The working factory `libfmjni.so` is **not** replaced by the library built from `jni/`.
+
 ## Credits
 - [iusmac (Max)](https://github.com/iusmac)

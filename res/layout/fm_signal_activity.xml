@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2014,2022 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:fillViewport="true"
+    android:paddingBottom="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="8dp">
+
+        <!-- Status card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/signal_card_bg"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/signal_frequency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/signal_value_color"
+                android:textSize="40sp" />
+
+            <TextView
+                android:id="@+id/signal_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/signal_text_primary_color"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/signal_last_ok"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textColor="@color/signal_text_secondary_color"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <!-- RSSI graph card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/signal_card_bg"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/signal_graph_title"
+                android:textColor="@color/signal_text_primary_color"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/signal_graph_subtitle"
+                android:textColor="@color/signal_text_secondary_color"
+                android:textSize="13sp" />
+
+            <com.android.fmradio.views.FmSignalGraphView
+                android:id="@+id/signal_graph"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/signal_graph_title" />
+
+            <TextView
+                android:id="@+id/signal_graph_stats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/signal_text_secondary_color"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <!-- Parameters card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/signal_card_bg"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp">
+
+            <include
+                android:id="@+id/row_rssi"
+                layout="@layout/fm_signal_row" />
+
+            <include
+                android:id="@+id/row_stereo"
+                layout="@layout/fm_signal_row" />
+
+            <include
+                android:id="@+id/row_bler"
+                layout="@layout/fm_signal_row" />
+
+            <include
+                android:id="@+id/row_cap_array"
+                layout="@layout/fm_signal_row" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="@string/signal_footer"
+            android:textColor="@color/signal_text_secondary_color"
+            android:textSize="12sp" />
+    </LinearLayout>
+</ScrollView>

@@ -70,4 +70,35 @@
     <string name="accessibility_pause">Пауза</string>
     <string name="accessibility_next">След.</string>
     <string name="accessibility_prev">Предыдущий</string>
+
+    <!-- Signal diagnostics screen -->
+    <string name="signal_title">Диагностика сигнала</string>
+    <string name="signal_frequency_format">%1$s МГц</string>
+    <string name="signal_state_active">Идёт измерение</string>
+    <string name="signal_state_radio_off">Радио выключено, измерений нет</string>
+    <string name="signal_state_busy">Идёт поиск станций, измерения приостановлены</string>
+    <string name="signal_state_no_service">Подключение к службе радио…</string>
+    <string name="signal_last_ok">Последнее успешное измерение: %1$s</string>
+    <string name="signal_last_ok_never">Успешных измерений ещё не было</string>
+    <string name="signal_time_never">не было</string>
+    <string name="signal_graph_title">RSSI во времени</string>
+    <string name="signal_graph_subtitle">Сырые значения драйвера, не dBm. При смене станции график начинается заново.</string>
+    <string name="signal_graph_empty">Сбор данных…</string>
+    <string name="signal_graph_stats">мин %1$d · сред. %2$s · макс %3$d · отсчётов %4$d</string>
+    <string name="signal_note_unsupported">Недоступно: этот метод отсутствует в установленной libfmjni.so.</string>
+    <string name="signal_note_error">Ошибка чтения. Последнее успешное чтение: %1$s</string>
+    <string name="signal_note_not_read">Сейчас не измеряется. Последнее успешное чтение: %1$s</string>
+    <string name="signal_rssi_title">RSSI</string>
+    <string name="signal_rssi_desc">Уровень принимаемого сигнала по данным драйвера. Чем больше значение, тем сильнее сигнал.</string>
+    <string name="signal_rssi_note">Сырые единицы драйвера (не dBm).</string>
+    <string name="signal_stereo_title">Флаг стерео / моно</string>
+    <string name="signal_stereo_desc">Флаг режима приёма по данным драйвера.</string>
+    <string name="signal_stereo_note">Сырой флаг, 1 или 0. Какое значение означает стерео, на MT6631 пока не подтверждено.</string>
+    <string name="signal_bler_title">RDS BLER</string>
+    <string name="signal_bler_desc">Доля ошибок в принятых блоках RDS. Чем меньше значение, тем чище данные RDS.</string>
+    <string name="signal_bler_note">Сырое значение драйвера, шкала не подтверждена.</string>
+    <string name="signal_cap_title">Массив ёмкостей антенны</string>
+    <string name="signal_cap_desc">Код массива ёмкостей, считанный с FM-чипа (настройка антенны). Диагностическое значение.</string>
+    <string name="signal_cap_note">Сырое значение драйвера, шкала не подтверждена.</string>
+    <string name="signal_footer">Все значения — сырые показания драйвера MT6631 без пересчёта в единицы измерения. Измерения только читают данные и не меняют настройки радио.</string>
 </resources>

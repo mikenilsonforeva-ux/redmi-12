@@ -781,6 +781,9 @@ public class FmMainActivity extends Activity implements FmFavoriteEditDialog.Edi
             setSpeakerPhoneOn(true);
             mMenuItemHeadset.setIcon(R.drawable.btn_fm_speaker_selector);
             invalidateOptionsMenu();
+        } else if (itemId == R.id.fm_signal) {
+            // Read-only signal diagnostics; does not touch the radio state.
+            startActivity(new Intent(this, FmSignalActivity.class));
         } else if (itemId == R.id.fm_start_record) {
             Intent recordIntent = new Intent(this, FmRecordActivity.class);
             recordIntent.putExtra(FmStation.CURRENT_STATION, mCurrentStation);

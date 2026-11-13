@@ -129,6 +129,39 @@
     <string name="accessibility_next">Next</string>
     <string name="accessibility_prev">Previous</string>
 
+    <!-- Signal diagnostics screen -->
+    <string name="signal_title">Signal diagnostics</string>
+    <string name="signal_frequency_format">%1$s MHz</string>
+    <string name="signal_frequency_unknown" translatable="false">—</string>
+    <string name="signal_state_active">Measuring</string>
+    <string name="signal_state_radio_off">Radio is off, no measurements</string>
+    <string name="signal_state_busy">Scan or seek in progress, measurements paused</string>
+    <string name="signal_state_no_service">Connecting to the radio service…</string>
+    <string name="signal_last_ok">Last successful measurement: %1$s</string>
+    <string name="signal_last_ok_never">No successful measurement yet</string>
+    <string name="signal_time_never">never</string>
+    <string name="signal_graph_title">RSSI over time</string>
+    <string name="signal_graph_subtitle">Raw driver values, not dBm. The graph restarts when you change station.</string>
+    <string name="signal_graph_empty">Collecting data…</string>
+    <string name="signal_graph_stats">min %1$d · avg %2$s · max %3$d · samples %4$d</string>
+    <string name="signal_value_unavailable" translatable="false">—</string>
+    <string name="signal_note_unsupported">Not available: this method is missing from the installed libfmjni.so.</string>
+    <string name="signal_note_error">Read failed. Last successful read: %1$s</string>
+    <string name="signal_note_not_read">Not measured right now. Last successful read: %1$s</string>
+    <string name="signal_rssi_title">RSSI</string>
+    <string name="signal_rssi_desc">Received signal strength reported by the driver. A higher value means a stronger signal.</string>
+    <string name="signal_rssi_note">Raw driver units (not dBm).</string>
+    <string name="signal_stereo_title">Stereo / Mono flag</string>
+    <string name="signal_stereo_desc">Reception mode flag reported by the driver.</string>
+    <string name="signal_stereo_note">Raw flag, 1 or 0. Which value means stereo is not yet confirmed on the MT6631.</string>
+    <string name="signal_bler_title">RDS BLER</string>
+    <string name="signal_bler_desc">Error rate of received RDS blocks. A lower value means cleaner RDS data.</string>
+    <string name="signal_bler_note">Raw driver value, scale not confirmed.</string>
+    <string name="signal_cap_title">Antenna capacitor array</string>
+    <string name="signal_cap_desc">Capacitor array code read back from the FM chip (antenna tuning). A diagnostic value.</string>
+    <string name="signal_cap_note">Raw driver value, scale not confirmed.</string>
+    <string name="signal_footer">All values are raw readings from the MT6631 driver, shown without unit conversion. Measurements are read-only and never change radio settings.</string>
+
     <!-- Font family for notification artwork text -->
     <string name="fm_notification_artwork_font_family" translatable="false">roboto</string>
 </resources>
